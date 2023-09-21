@@ -1,0 +1,179 @@
+.accueil{
+    display: flex;
+    flex-direction: column;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    background-color: rgb(241, 242, 246);
+    margin: 0;
+}
+
+.face_body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    margin: 6rem 0 9rem 0;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+}
+
+.formulaire{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title_face img{
+    height: 106px;
+    margin: -28px;
+    border: 0;
+}
+
+.slogan{
+    line-height: 28px;
+    width: auto;
+    font-weight: normal;
+    padding: 0 0 20px;
+}
+
+.form_inscription{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    margin: 40px 0 0;
+    padding: 20px 28px;
+    gap: 1rem;
+}
+
+.formul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input_text{
+    border-radius: 6px;
+    font-size: 17px;
+    padding: 14px 16px;
+    vertical-align: middle;
+    line-height: 16px;
+    background: #FFFFFF;
+    border: 1px solid #dddfe2;
+    color: #1d2129;
+}
+
+.input_button{
+    height: 45px;
+    color: white;
+    background-color: rgb(25, 119, 243);
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 20px;
+    line-height: 48px;
+    font-weight: bold;
+}
+
+.input_text:focus{
+    outline: 0.5px solid rgb(25, 119, 243);
+}
+
+.link_oublie{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link_oublie a{
+    text-decoration: none;
+    padding: 0 90px 20px 90px;
+    border-bottom: 1px solid #dddfe2;
+    color: rgb(25, 119, 243);
+    font-size: 14px;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.creer_compte{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.creer_compte a{
+    background-color: rgb(54, 164, 32);
+    text-decoration: none;
+    color: white;
+    border-radius: 6px;
+    font-size: 17px;
+    line-height: 48px;
+    padding: 0px 16px;
+    margin-top: 10px;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.creer_page{
+    text-align: center;
+    padding: 0 10px;
+}
+
+.page_text:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.image_fond{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image_fond img{
+    width: 250px;
+}
+
+@media screen and (max-width: 1050px) {
+    .face_body{
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .face_body{
+        gap: 1px;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .face_body{
+        flex-direction: column;
+        margin: 0;
+    }
+    .title_face img{
+        margin: 0px;
+    }
+    .slogan{
+        margin-left: 30px
+    }
+}
+
+@media screen and (max-width: 453px) {
+    .face_body{
+        margin: 30px;
+    }
+    .link_oublie a{
+        padding: 0 72px 20px 60px;
+    }
+}
